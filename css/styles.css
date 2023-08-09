@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap');
+* {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+button {
+  padding: 0;
+  border: none;
+  background: none;
+  border-radius: 4px;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  cursor: pointer;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+	background: linear-gradient(-105deg, #ffffff, #711de7, #FF15E5, #00f7ff);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+h1 {
+  position: absolute;
+  top: 50px;
+  color: #000000;
+
+}
+.main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  justify-content: center;
+
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  width: 500px;
+ 
+
+  border-radius: 15px;
+  background-color: black;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.generated_password {
+  position: relative;
+  width: 100%;
+  height: 80px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+ 
+
+  background-color: #D9D9D9;
+
+  border-radius: 10px;
+
+
+}
+
+.password {
+  font-size: 18px;
+
+}
+.copy-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  background-image: url(/img/Grid/copyBtn.svg);
+  background-size: cover;
+  width: 22px;
+  height: 22px;
+}
+
+.copy-btn:hover,
+.copy-btn:focus {
+  background-color: #fcfcfc;
+}
+
+.range-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 20px;
+
+  width: 100%;
+}
+.range-slider {
+
+  width: 100%;
+  height: 4px;
+  border-radius: 5px;
+  background: #ffffff;
+  outline: none;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.range-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #7c00f8;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.range-slider::-webkit-slider-thumb:hover {
+  box-shadow: 0px 0px 0px 8px rgba(255, 255, 255, 0.591);
+  transition: 0.3s ease-in-out;
+}
+
+.range-slider::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+.range-slider-value {
+  color: #fcfcfc;
+  font-weight: 600;
+}
+
+.password-settings {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+}
+
+.setting {
+  display: flex;
+  margin-bottom: 15px;
+
+  width: 100%;
+
+  align-items: center;
+  justify-content: space-between;
+}
+
+.setting-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 40px;
+
+  display: block;
+  color: #fcfcfc;
+  font-size: 18px;
+}
+
+.switch {
+  --secondary-container: #3a4b39;
+  --primary: #84da89;
+  font-size: 14px;
+  position: relative;
+  display: inline-block;
+  width: 3.7em;
+  height: 1.8em;
+ }
+ 
+ .switch input {
+  display: none;
+  opacity: 0;
+  width: 0;
+  height: 0;
+ }
+ 
+ .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #313033;
+  transition: .2s;
+  border-radius: 30px;
+ }
+ 
+ .slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  border-radius: 20px;
+  left: 0.2em;
+  bottom: 0.2em;
+  background-color: #aeaaae;
+  transition: .4s;
+ }
+ 
+ input:checked + .slider::before {
+  background-color: var(--primary);
+ }
+ 
+ input:checked + .slider {
+  background-color: var(--secondary-container);
+ }
+ 
+ input:focus + .slider {
+  box-shadow: 0 0 1px var(--secondary-container);
+ }
+ 
+ input:checked + .slider:before {
+  transform: translateX(1.9em);
+ }
+
+ .generate-btn {
+  width: 100%;
+  height: 50px;
+
+  margin-top: 20px;
+
+  background-color: #7c00f8;
+  color: #fff;
+  font-size: 18px;
+
+  transition: all 0.4s linear;
+ }
+
+ .generate-btn:hover, 
+ .generate-btn:focus {
+  background-color: #fff;
+  color: #000;
+ }
