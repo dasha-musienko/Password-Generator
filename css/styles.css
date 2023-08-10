@@ -99,8 +99,7 @@ h1 {
   height: 22px;
 }
 
-.copy-btn:hover,
-.copy-btn:focus {
+.copy-btn:hover {
   background-color: #fcfcfc;
 }
 
@@ -251,8 +250,7 @@ h1 {
   transition: all 0.4s linear;
  }
 
- .generate-btn:hover, 
- .generate-btn:focus {
+ .generate-btn:hover {
   background-color: #fff;
   color: #000;
  }
